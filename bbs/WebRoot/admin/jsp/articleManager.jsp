@@ -1,7 +1,7 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@include file="/admin/inc/_header.jsp" %>
 <%@include file="_manager.jsp" %>
-<script type="text/javascript" src="/style/js/article/articleManager.js"></script>
+<script type="text/javascript" src="style/js/article/articleManager.js"></script>
 	<div id="stb">
 		<form id="form">
 			版块:<select id="module" name="module.id" class="easyui-combobox" style="width:100px;">

@@ -97,4 +97,4 @@
 </div>
 </div>
 
-<script type="text/javascript" src="/style/js/nav.js"></script>
+<script type="text/javascript" src="style/js/nav.js"></script>

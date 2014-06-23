@@ -1,6 +1,6 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@include file="/admin/inc/_header.jsp" %>
-<script type="text/javascript" src="/style/js/user/moderatorManager.js"></script>
+<script type="text/javascript" src="style/js/user/moderatorManager.js"></script>
 <%@include file="_manager.jsp" %>
 	<div id="stb">
 		<form id="form">

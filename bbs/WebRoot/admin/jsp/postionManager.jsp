@@ -1,7 +1,7 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@include file="/admin/inc/_header.jsp" %>
 <%@include file="_manager.jsp" %>
-<script type="text/javascript" src="/style/js/postion/postionManager.js"></script>
+<script type="text/javascript" src="style/js/postion/postionManager.js"></script>
 <!-- 工具栏 -->
 <div id="tb" style="display: none">
 		<form id="form">

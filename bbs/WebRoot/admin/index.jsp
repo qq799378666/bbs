@@ -6,6 +6,6 @@
 	<%@include file="inc/main/_center.jsp" %>
 	<%@include file="inc/main/_south.jsp" %>
 	<%@include file="inc/main/_tool.jsp" %>
-</body><script type="text/javascript" src="/admin/index.js"></script>
-<script type="text/javascript" src="/admin/style.js"></script>
+</body><script type="text/javascript" src="admin/index.js"></script>
+<script type="text/javascript" src="admin/style.js"></script>
 <%@include file="inc/_footer.jsp" %>

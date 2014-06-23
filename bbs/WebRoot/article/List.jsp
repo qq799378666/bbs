@@ -57,7 +57,8 @@
 	<s:else>
 		<ul class="list-group">
 			<s:iterator value="articlePV.rows">
-				<li class="list-group-item"><a target="_blank" href="Article?id=${id }"><s:property value="title" /></a>${good?'<span class=\"label label-success\">精</span>':'' } <span class="pull-right"><s:property value="@com.util.ViewUtil@test(time)" /> </span></li>
+				<li class="list-group-item"><a target="_blank" href="Article?id=${id }"><s:property value="title" /></a>
+				${good?'<span class="label label-success">精</span>':'' } <span class="pull-right"><s:property value="@com.util.ViewUtil@test(time)" /> </span></li>
 			</s:iterator>
 		</ul>
 	</s:else>

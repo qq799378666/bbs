@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" href="/style/toTop/css/manhuatoTop.1.0.css">
-<script type="text/javascript" src="/style/toTop/js/manhuatoTop.1.0.js"></script>
+<link rel="stylesheet" type="text/css" href="style/toTop/css/manhuatoTop.1.0.css">
+<script type="text/javascript" src="style/toTop/js/manhuatoTop.1.0.js"></script>
 <script type="text/javascript">
 $(function (){
 	$(window).manhuatoTop({

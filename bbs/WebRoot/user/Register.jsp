@@ -96,6 +96,6 @@
 
     </form>
 </div>
-<script src="/style/js/user/register.js"></script>
+<script src="style/js/user/register.js"></script>
 </body>
 <%@include file="/inc/_footer.jsp"%>

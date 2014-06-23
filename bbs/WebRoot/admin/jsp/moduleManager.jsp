@@ -1,7 +1,7 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@include file="/admin/inc/_header.jsp" %>
 <%@include file="_manager.jsp" %>
-<script type="text/javascript" src="/style/js/module/moduleManager.js"></script>
+<script type="text/javascript" src="style/js/module/moduleManager.js"></script>
 <div id="stb">
 		<form id="form">
 			名称:<input name="search['rname']" />

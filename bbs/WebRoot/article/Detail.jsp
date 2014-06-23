@@ -89,6 +89,6 @@
         <br>
         <br>
         <br>
-<script src="/style/js/article/detail.js"></script>
+<script src="style/js/article/detail.js"></script>
 <%@include file="/inc/_toTop.jsp"%>
 <%@include file="/inc/_footer.jsp"%>
