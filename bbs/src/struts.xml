@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.objectFactory" value="spring" />
+	<include file="struts-common.xml"></include>
+   <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<package name="json" namespace="/" extends="jcommon">
+		<!-- 不需要任何权限 -->
+		<action name="j_User_check" class="com.action.json.JSONUserAction" method="check">
+				<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+				</result>
+		</action>
+		<action name="j_User_login" class="com.action.json.JSONUserAction" method="login">
+				<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+				</result>
+		</action>
+		<action name="j_User_register" class="com.action.json.JSONUserAction" method="register">
+				<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+				</result>
+		</action>
+		<action name="j_Comment_add" class="com.action.json.JSONCommentAction" method="add">
+				<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+				</result>
+		</action>
+		<action name="j_Article_add" class="com.action.json.JSONArticleAction" method="add">
+				<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+				</result>
+		</action>
+		<action name="j_User_alter" class="com.action.json.JSONUserAction" method="alter">
+				<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+				</result>
+		</action>
+		<action name="j_Menu_getMenusByCurUser" class="com.action.json.JSONMenuAction" method="getMenusByCurUser">
+				<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+				</result>
+		</action>
+		
+		<action name="j_*_*PageVO*" class="com.action.json.JSON{1}Action" method="{2}PageVO{3}">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="roleInterceptor"></interceptor-ref>
+			<interceptor-ref name="pageInterceptor">
+				<param name="pageName">page</param>
+				<param name="pageSizeName">rows</param>
+			</interceptor-ref>
+			<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+
+		<action name="j_*_*" class="com.action.json.JSON{1}Action" method="{2}">
+				<interceptor-ref name="roleInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result type="json">
+				<param name="root">root</param>
+				<param name="contentType">text/html</param>
+			</result>
+		</action>
+		
+	</package>
+	<package name="t1" namespace="/" extends="common">
+		<action name="index" class="com.action.IndexAction" method="index">
+			<result>/index2.jsp</result>
+		</action>
+		
+		<action name="Photo_yzm" class="com.action.PhotoAction" method="yzm">
+			<result type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+				<param name="allowCaching">false</param>
+			</result>
+		</action>
+
+		<action name="User" class="com.action.UserAction" method="home">
+			<result>/user/Home.jsp</result>
+		</action>
+		<action name="User_detail" class="com.action.UserAction" method="detail">
+			<result>/user/Detail.jsp</result>
+		</action>
+
+		<action name="User_logout" class="com.action.UserAction" method="logout">
+			<result type="redirect">/${href}</result>
+		</action>
+
+		<action name="User_toAlter" class="com.action.UserAction" method="toAlter">
+			<result>/user/Alter.jsp</result>
+		</action>
+		<action name="User_toLogin" class="com.action.UserAction" method="toLogin">
+			<result>/user/Login.jsp</result>
+		</action>
+		<action name="User_toFindPwd" class="com.action.UserAction" method="toFindPwd">
+			<result>/user/FindPwd.jsp</result>
+		</action>
+		
+		<action name="Article_toAdd" class="com.action.ArticleAction" method="toAdd">
+			<result>/article/Add.jsp</result>
+		</action>
+
+		<action name="Article_list" class="com.action.ArticleAction" method="list">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="pageInterceptor">
+				<param name="pageName">p</param>
+				<param name="pageSizeName">ps</param>
+			</interceptor-ref>			
+			<result>/article/List.jsp</result>
+		</action>
+
+		<action name="Article" class="com.action.ArticleAction" method="detail">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="pageInterceptor">
+				<param name="pageName">p</param>
+				<param name="pageSizeName">ps</param>
+			</interceptor-ref>
+			<result>/article/Detail.jsp</result>
+		</action>
+
+		<action name="Article_success" class="com.action.ArticleAction" method="toAddSuccess">
+			<result>/article/Add_success.jsp</result>
+		</action>
+
+		<action name="Comment" class="com.action.CommentAction" method="comment">
+			<result>/article/CommentList.jsp</result>
+		</action>
+
+	</package>
+
+</struts>    

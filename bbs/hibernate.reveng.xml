@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="t_article" catalog="db_44mo" class="com.po.Article"></table>
+	<table name="t_module" catalog="db_44mo" class="com.po.Module"></table>
+	<table name="t_user" catalog="db_44mo" class="com.po.User"></table>
+	<table name="t_comment" catalog="db_44mo" class="com.po.Comment"></table>
+	<table name="t_menu" catalog="db_44mo" class="com.po.Menu"></table>
+	<table name="t_postion" catalog="db_44mo" class="com.po.Postion"></table>
+	<table name="t_token" catalog="db_44mo" class="com.po.Token"></table>
+</hibernate-reverse-engineering>

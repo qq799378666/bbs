@@ -1,0 +1,17 @@
+#title {
+	font-size: 28px;
+	color: gray;
+	text-align: center;
+}
+
+.left {
+	width: 200px;
+}
+
+#author {
+	background-color: #D7F0B4;
+}
+
+.commentUser {
+	background-color: #E2EEFC;
+}

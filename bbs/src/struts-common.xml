@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="common" abstract="true" extends="struts-default">
+		<interceptors>
+			<interceptor name="pageInterceptor" class="com.interceptor.PagerIntercepter"></interceptor>
+			<interceptor name="roleInterceptor" class="com.interceptor.RoleIntercepter"></interceptor>
+		</interceptors>
+	</package>
+
+	<package name="jcommon" abstract="true" extends="json-default">
+		<interceptors>
+			<interceptor name="pageInterceptor" class="com.interceptor.PagerIntercepter"></interceptor>
+			<interceptor name="roleInterceptor" class="com.interceptor.RoleIntercepter"></interceptor>
+		</interceptors>
+ 	 	<global-results>
+			<result name="input">/common/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="input" exception="java.lang.RuntimeException" />
+		</global-exception-mappings>
+</package>
+	
+</struts>
